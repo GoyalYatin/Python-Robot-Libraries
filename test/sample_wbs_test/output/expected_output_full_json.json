@@ -1,0 +1,101 @@
+{
+  "statusCode": "200",
+  "data": {
+    "statusCode": "200",
+    "flightBk": "MH13381521676800000NULL",
+    "airlineCode": "MH",
+    "flightNumber": "1338",
+    "operationalSuffix": "NULL",
+    "departureDate": "2018-03-22 00:00:00 GMT",
+    "flightCharacteristics": "D",
+    "codeshareType": "O",
+    "electronicTicketIndicator": "E",
+    "legs": [
+      {
+        "legBk": "MH13381521676800000NULLKULTGG",
+        "boardpoint": "KUL",
+        "offPoint": "TGG",
+        "departureTerminal": "M",
+        "routingOrder": 1,
+        "schedules": {
+          "departureDateTime": "Thu Mar 22 19:30:00 GMT 2018",
+          "departureDateTimeUTC": "Thu Mar 22 11:30:00 GMT 2018",
+          "arrivalDateTime": "Thu Mar 22 19:30:00 GMT 2018",
+          "arrivalDateTimeUTC": "Thu Mar 22 11:30:00 GMT 2018"
+        },
+        "aircrafts": {
+          "aircraftType": "738",
+          "acv": "738",
+          "acvTotalCapacity": "160"
+        },
+        "saleableCabins": [
+          {
+            "code": "J",
+            "capacity": 16
+          },
+          {
+            "code": "Y",
+            "capacity": 144
+          }
+        ]
+      }
+    ],
+    "codeshareInfos": [
+      {
+        "flightBk": "GA93851521676800000NULL",
+        "airlineCode": "GA",
+        "flightNumber": "9385",
+        "operationalSuffix": "NULL",
+        "codeShareType": "M",
+        "mktSegBks": [
+          "GA93851521676800000NULLKULTGGM"
+        ]
+      },
+      {
+        "flightBk": "MH13381521676800000NULL",
+        "airlineCode": "MH",
+        "flightNumber": "1338",
+        "operationalSuffix": "NULL",
+        "codeShareType": "M",
+        "flightCharacteristics": "D",
+        "mktSegBks": [
+          "MH13381521676800000NULLKULTGGM"
+        ]
+      },
+      {
+        "flightBk": "FY42941521676800000NULL",
+        "airlineCode": "FY",
+        "flightNumber": "4294",
+        "operationalSuffix": "NULL",
+        "codeShareType": "M",
+        "mktSegBks": [
+          "FY42941521676800000NULLKULTGGM"
+        ]
+      },
+      {
+        "flightBk": "PR35141521676800000NULL",
+        "airlineCode": "PR",
+        "flightNumber": "3514",
+        "operationalSuffix": "NULL",
+        "codeShareType": "M",
+        "mktSegBks": [
+          "PR35141521676800000NULLKULTGGM"
+        ]
+      },
+      {
+        "flightBk": "EK33561521676800000NULL",
+        "airlineCode": "EK",
+        "flightNumber": "3356",
+        "operationalSuffix": "NULL",
+        "codeShareType": "M",
+        "mktSegBks": [
+          "EK33561521676800000NULLKULTGGM"
+        ]
+      }
+    ]
+  },
+  "meta": {
+    "creationDate": 1510540446959,
+    "lastUpdateDate": 1510540446960
+  }
+}

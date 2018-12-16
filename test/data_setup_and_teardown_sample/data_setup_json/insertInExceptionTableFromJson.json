@@ -1,0 +1,11 @@
+{
+  "feed": "1",
+  "year": 1,
+  "month": 1,
+  "day": 1, 
+  "hour": 1,
+  "partition_key": "123",
+  "application_name": "12",
+  "minute": 1,
+  "extra_info": "13"
+}

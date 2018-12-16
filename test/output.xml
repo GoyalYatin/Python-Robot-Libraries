@@ -1,0 +1,601 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20180607 14:29:38.355" generator="Robot 3.0.2 (Python 2.7.11 on win32)">
+<suite source="D:\git_clones\ds_qa_store\robot_lib\test\sample_wbs_test" id="s1" name="Sample Wbs Test">
+<suite source="D:\git_clones\ds_qa_store\robot_lib\test\sample_wbs_test\demo_random_generators.robot" id="s1-s1" name="Demo Random Generators">
+<test id="s1-s1-t1" name="Get Flight Test case 1">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${rloc}</arg>
+</arguments>
+<msg timestamp="20180607 14:29:38.462" level="INFO">generate_random_record_locator</msg>
+<status status="PASS" endtime="20180607 14:29:38.463" starttime="20180607 14:29:38.461"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${id}</arg>
+</arguments>
+<msg timestamp="20180607 14:29:38.467" level="INFO">generate_random_id</msg>
+<status status="PASS" endtime="20180607 14:29:38.467" starttime="20180607 14:29:38.464"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${ticket_number}</arg>
+</arguments>
+<msg timestamp="20180607 14:29:38.470" level="INFO">generate_random_ticket_number</msg>
+<status status="PASS" endtime="20180607 14:29:38.471" starttime="20180607 14:29:38.468"></status>
+</kw>
+<doc>= Test Condition =
+Provide some test condition
+= Test data =
+Test data
+= Test step number =
+== Step 1 ==
+Test steps
+== Step 2 ==
+....
+== Expected Result ==
+Verify</doc>
+<timeout value="3 minutes 20 seconds"></timeout>
+<status status="PASS" endtime="20180607 14:29:38.472" critical="yes" starttime="20180607 14:29:38.458"></status>
+</test>
+<status status="PASS" endtime="20180607 14:29:38.481" starttime="20180607 14:29:38.444"></status>
+</suite>
+<suite source="D:\git_clones\ds_qa_store\robot_lib\test\sample_wbs_test\demo_sorted_json.robot" id="s1-s2" name="Demo Sorted Json">
+<test id="s1-s2-t1" name="Get Flight Test case 1">
+<kw name="Request Wbs Sorted Json" library="fetch_webservice">
+<doc>sending request for the input url and returning the response in json sorted</doc>
+<arguments>
+<arg>${GETFLIGHT_ENDPOINT}carrierCode=${carrier}&amp;flightNumber=${number}&amp;flightDate=${departure_date}</arg>
+</arguments>
+<assign>
+<var>${actual}</var>
+</assign>
+<msg timestamp="20180607 14:29:42.672" level="INFO">tunnel open now</msg>
+<msg timestamp="20180607 14:29:43.336" level="INFO">tunnel closed</msg>
+<msg timestamp="20180607 14:29:43.337" level="INFO">Requested response {
+"data": {
+"airlineCode": "MH", 
+"codeshareInfos": [
+{
+"airlineCode": "GA", 
+"codeShareType": "M", 
+"flightBk": "GA93851521676800000NULL", 
+"flightNumber": "9385", 
+"mktSegBks": [
+"GA93851521676800000NULLKULTGGM"
+], 
+"operationalSuffix": "NULL"
+}, 
+{
+"airlineCode": "MH", 
+"codeShareType": "M", 
+"flightBk": "MH13381521676800000NULL", 
+"flightCharacteristics": "D", 
+"flightNumber": "1338", 
+"mktSegBks": [
+"MH13381521676800000NULLKULTGGM"
+], 
+"operationalSuffix": "NULL"
+}, 
+{
+"airlineCode": "FY", 
+"codeShareType": "M", 
+"flightBk": "FY42941521676800000NULL", 
+"flightNumber": "4294", 
+"mktSegBks": [
+"FY42941521676800000NULLKULTGGM"
+], 
+"operationalSuffix": "NULL"
+}, 
+{
+"airlineCode": "PR", 
+"codeShareType": "M", 
+"flightBk": "PR35141521676800000NULL", 
+"flightNumber": "3514", 
+"mktSegBks": [
+"PR35141521676800000NULLKULTGGM"
+], 
+"operationalSuffix": "NULL"
+}, 
+{
+"airlineCode": "EK", 
+"codeShareType": "M", 
+"flightBk": "EK33561521676800000NULL", 
+"flightNumber": "3356", 
+"mktSegBks": [
+"EK33561521676800000NULLKULTGGM"
+], 
+"operationalSuffix": "NULL"
+}
+], 
+"codeshareType": "O", 
+"departureDate": "2018-03-22 00:00:00 GMT", 
+"electronicTicketIndicator": "E", 
+"flightBk": "MH13381521676800000NULL", 
+"flightCharacteristics": "D", 
+"flightNumber": "1338", 
+"legs": [
+{
+"aircrafts": {
+"acv": "738", 
+"acvTotalCapacity": "160", 
+"aircraftType": "738"
+}, 
+"boardpoint": "KUL", 
+"departureTerminal": "M", 
+"legBk": "MH13381521676800000NULLKULTGG", 
+"offPoint": "TGG", 
+"routingOrder": 1, 
+"saleableCabins": [
+{
+"capacity": 16, 
+"code": "J"
+}, 
+{
+"capacity": 144, 
+"code": "Y"
+}
+], 
+"schedules": {
+"arrivalDateTime": "Thu Mar 22 19:30:00 GMT 2018", 
+"arrivalDateTimeUTC": "Thu Mar 22 11:30:00 GMT 2018", 
+"departureDateTime": "Thu Mar 22 19:30:00 GMT 2018", 
+"departureDateTimeUTC": "Thu Mar 22 11:30:00 GMT 2018"
+}
+}
+], 
+"operationalSuffix": "NULL", 
+"statusCode": "200"
+}, 
+"meta": {
+"creationDate": 1510540446959, 
+"lastUpdateDate": 1510540446960
+}, 
+"statusCode": "200"
+}</msg>
+<msg timestamp="20180607 14:29:43.338" level="INFO">${actual} = {
+"data": {
+"airlineCode": "MH", 
+"codeshareInfos": [
+{
+"airlineCode": "GA", 
+"codeShareType": "M", 
+"flightBk": "GA93851521676800000NULL", 
+"flightNumber": "9385", 
+"mktSegBks": [
+"GA9385152167680000...</msg>
+<status status="PASS" endtime="20180607 14:29:43.338" starttime="20180607 14:29:41.002"></status>
+</kw>
+<kw name="Get File Sorted Json" library="get_file_lib">
+<doc>get file from path and return sorted json</doc>
+<arguments>
+<arg>${expected_file}</arg>
+</arguments>
+<assign>
+<var>${expected}</var>
+</assign>
+<msg timestamp="20180607 14:29:43.345" level="INFO">${expected} = {
+"data": {
+"airlineCode": "MH", 
+"codeshareInfos": [
+{
+"airlineCode": "GA", 
+"codeShareType": "M", 
+"flightBk": "GA93851521676800000NULL", 
+"flightNumber": "9385", 
+"mktSegBks": [
+"GA9385152167680000...</msg>
+<status status="PASS" endtime="20180607 14:29:43.346" starttime="20180607 14:29:43.340"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${actual}</arg>
+<arg>${expected}</arg>
+</arguments>
+<status status="PASS" endtime="20180607 14:29:43.351" starttime="20180607 14:29:43.347"></status>
+</kw>
+<doc>= Test Condition =
+Provide some test condition
+= Test data =
+Test data
+= Test step number =
+== Step 1 ==
+Test steps
+== Step 2 ==
+....
+== Expected Result ==
+Verify</doc>
+<timeout value="3 minutes 20 seconds"></timeout>
+<status status="PASS" endtime="20180607 14:29:43.352" critical="yes" starttime="20180607 14:29:41.000"></status>
+</test>
+<status status="PASS" endtime="20180607 14:29:43.360" starttime="20180607 14:29:38.493"></status>
+</suite>
+<suite source="D:\git_clones\ds_qa_store\robot_lib\test\sample_wbs_test\demo_subset.robot" id="s1-s3" name="Demo Subset">
+<test id="s1-s3-t1" name="Get Flight Test case 1">
+<kw name="Request Wbs" library="fetch_webservice">
+<doc>sending request for the input url and returning the response</doc>
+<arguments>
+<arg>${GETFLIGHT_ENDPOINT}carrierCode=${carrier}&amp;flightNumber=${number}&amp;flightDate=${departure_date}</arg>
+</arguments>
+<assign>
+<var>${actual}</var>
+</assign>
+<msg timestamp="20180607 14:29:44.711" level="INFO">tunnel open now</msg>
+<msg timestamp="20180607 14:29:45.351" level="INFO">tunnel closed</msg>
+<msg timestamp="20180607 14:29:45.351" level="INFO">Requested response {"statusCode":"200","data":{"statusCode":"200","flightBk":"MH13381521676800000NULL","airlineCode":"MH","flightNumber":"1338","operationalSuffix":"NULL","departureDate":"2018-03-22 00:00:00 GMT","flightCharacteristics":"D","codeshareType":"O","electronicTicketIndicator":"E","legs":[{"legBk":"MH13381521676800000NULLKULTGG","boardpoint":"KUL","offPoint":"TGG","departureTerminal":"M","routingOrder":1,"schedules":{"departureDateTime":"Thu Mar 22 19:30:00 GMT 2018","departureDateTimeUTC":"Thu Mar 22 11:30:00 GMT 2018","arrivalDateTime":"Thu Mar 22 19:30:00 GMT 2018","arrivalDateTimeUTC":"Thu Mar 22 11:30:00 GMT 2018"},"aircrafts":{"aircraftType":"738","acv":"738","acvTotalCapacity":"160"},"saleableCabins":[{"code":"J","capacity":16},{"code":"Y","capacity":144}]}],"codeshareInfos":[{"flightBk":"GA93851521676800000NULL","airlineCode":"GA","flightNumber":"9385","operationalSuffix":"NULL","codeShareType":"M","mktSegBks":["GA93851521676800000NULLKULTGGM"]},{"flightBk":"MH13381521676800000NULL","airlineCode":"MH","flightNumber":"1338","operationalSuffix":"NULL","codeShareType":"M","flightCharacteristics":"D","mktSegBks":["MH13381521676800000NULLKULTGGM"]},{"flightBk":"FY42941521676800000NULL","airlineCode":"FY","flightNumber":"4294","operationalSuffix":"NULL","codeShareType":"M","mktSegBks":["FY42941521676800000NULLKULTGGM"]},{"flightBk":"PR35141521676800000NULL","airlineCode":"PR","flightNumber":"3514","operationalSuffix":"NULL","codeShareType":"M","mktSegBks":["PR35141521676800000NULLKULTGGM"]},{"flightBk":"EK33561521676800000NULL","airlineCode":"EK","flightNumber":"3356","operationalSuffix":"NULL","codeShareType":"M","mktSegBks":["EK33561521676800000NULLKULTGGM"]}]},"meta":{"creationDate":1510540446959,"lastUpdateDate":1510540446960}}</msg>
+<msg timestamp="20180607 14:29:45.353" level="INFO">${actual} = {"statusCode":"200","data":{"statusCode":"200","flightBk":"MH13381521676800000NULL","airlineCode":"MH","flightNumber":"1338","operationalSuffix":"NULL","departureDate":"2018-03-22 00:00:00 GMT","fligh...</msg>
+<status status="PASS" endtime="20180607 14:29:45.353" starttime="20180607 14:29:43.475"></status>
+</kw>
+<kw name="To Json" library="RequestsLibrary">
+<doc>Convert a string to a JSON object</doc>
+<arguments>
+<arg>${actual}</arg>
+</arguments>
+<assign>
+<var>${actual1}</var>
+</assign>
+<msg timestamp="20180607 14:29:45.357" level="INFO">To JSON using : content={"statusCode":"200","data":{"statusCode":"200","flightBk":"MH13381521676800000NULL","airlineCode":"MH","flightNumber":"1338","operationalSuffix":"NULL","departureDate":"2018-03-22 00:00:00 GMT","flightCharacteristics":"D","codeshareType":"O","electronicTicketIndicator":"E","legs":[{"legBk":"MH13381521676800000NULLKULTGG","boardpoint":"KUL","offPoint":"TGG","departureTerminal":"M","routingOrder":1,"schedules":{"departureDateTime":"Thu Mar 22 19:30:00 GMT 2018","departureDateTimeUTC":"Thu Mar 22 11:30:00 GMT 2018","arrivalDateTime":"Thu Mar 22 19:30:00 GMT 2018","arrivalDateTimeUTC":"Thu Mar 22 11:30:00 GMT 2018"},"aircrafts":{"aircraftType":"738","acv":"738","acvTotalCapacity":"160"},"saleableCabins":[{"code":"J","capacity":16},{"code":"Y","capacity":144}]}],"codeshareInfos":[{"flightBk":"GA93851521676800000NULL","airlineCode":"GA","flightNumber":"9385","operationalSuffix":"NULL","codeShareType":"M","mktSegBks":["GA93851521676800000NULLKULTGGM"]},{"flightBk":"MH13381521676800000NULL","airlineCode":"MH","flightNumber":"1338","operationalSuffix":"NULL","codeShareType":"M","flightCharacteristics":"D","mktSegBks":["MH13381521676800000NULLKULTGGM"]},{"flightBk":"FY42941521676800000NULL","airlineCode":"FY","flightNumber":"4294","operationalSuffix":"NULL","codeShareType":"M","mktSegBks":["FY42941521676800000NULLKULTGGM"]},{"flightBk":"PR35141521676800000NULL","airlineCode":"PR","flightNumber":"3514","operationalSuffix":"NULL","codeShareType":"M","mktSegBks":["PR35141521676800000NULLKULTGGM"]},{"flightBk":"EK33561521676800000NULL","airlineCode":"EK","flightNumber":"3356","operationalSuffix":"NULL","codeShareType":"M","mktSegBks":["EK33561521676800000NULLKULTGGM"]}]},"meta":{"creationDate":1510540446959,"lastUpdateDate":1510540446960}} </msg>
+<msg timestamp="20180607 14:29:45.357" level="INFO">To JSON using : pretty_print=False </msg>
+<msg timestamp="20180607 14:29:45.358" level="INFO">${actual1} = {u'meta': {u'lastUpdateDate': 1510540446960L, u'creationDate': 1510540446959L}, u'data': {u'flightCharacteristics': u'D', u'codeshareType': u'O', u'flightNumber': u'1338', u'flightBk': u'MH13381521676...</msg>
+<status status="PASS" endtime="20180607 14:29:45.359" starttime="20180607 14:29:45.355"></status>
+</kw>
+<kw name="Get File From Path" library="get_file_lib">
+<doc>get file from path and return string</doc>
+<arguments>
+<arg>${expected_file}</arg>
+</arguments>
+<assign>
+<var>${expected}</var>
+</assign>
+<msg timestamp="20180607 14:29:45.365" level="INFO">${expected} = {
+  "statusCode": "200",
+  "data": {
+    "statusCode": "200",
+    "flightBk": "MH13381521676800000NULL",
+    "airlineCode": "MH",
+    "flightNumber": "1338",
+    "operationalSuffix": "NULL",
+    "depa...</msg>
+<status status="PASS" endtime="20180607 14:29:45.365" starttime="20180607 14:29:45.360"></status>
+</kw>
+<kw name="To Json" library="RequestsLibrary">
+<doc>Convert a string to a JSON object</doc>
+<arguments>
+<arg>${expected}</arg>
+</arguments>
+<assign>
+<var>${expected1}</var>
+</assign>
+<msg timestamp="20180607 14:29:45.371" level="INFO">To JSON using : content={
+  "statusCode": "200",
+  "data": {
+    "statusCode": "200",
+    "flightBk": "MH13381521676800000NULL",
+    "airlineCode": "MH",
+    "flightNumber": "1338",
+    "operationalSuffix": "NULL",
+    "departureDate": "2018-03-22 00:00:00 GMT",
+    "flightCharacteristics": "D",
+    "codeshareType": "O",
+    "electronicTicketIndicator": "E",
+    "codeshareInfos": [
+      {
+        "flightBk": "MH13381521676800000NULL",
+        "airlineCode": "MH",
+        "flightNumber": "1338",
+        "operationalSuffix": "NULL",
+        "codeShareType": "M",
+        "flightCharacteristics": "D",
+        "mktSegBks": [
+          "MH13381521676800000NULLKULTGGM"
+        ]
+      },
+      {
+        "flightBk": "FY42941521676800000NULL",
+        "airlineCode": "FY",
+        "flightNumber": "4294",
+        "operationalSuffix": "NULL",
+        "codeShareType": "M",
+        "mktSegBks": [
+          "FY42941521676800000NULLKULTGGM"
+        ]
+      },
+      {
+        "flightBk": "PR35141521676800000NULL",
+        "airlineCode": "PR",
+        "flightNumber": "3514",
+        "operationalSuffix": "NULL",
+        "codeShareType": "M",
+        "mktSegBks": [
+          "PR35141521676800000NULLKULTGGM"
+        ]
+      },
+      {
+        "flightBk": "EK33561521676800000NULL",
+        "airlineCode": "EK",
+        "flightNumber": "3356",
+        "operationalSuffix": "NULL",
+        "codeShareType": "M",
+        "mktSegBks": [
+          "EK33561521676800000NULLKULTGGM"
+        ]
+      }
+    ]
+  },
+  "meta": {
+    "creationDate": 1510540446959,
+    "lastUpdateDate": 1510540446960
+  }
+} </msg>
+<msg timestamp="20180607 14:29:45.371" level="INFO">To JSON using : pretty_print=False </msg>
+<msg timestamp="20180607 14:29:45.372" level="INFO">${expected1} = {u'meta': {u'lastUpdateDate': 1510540446960L, u'creationDate': 1510540446959L}, u'data': {u'flightCharacteristics': u'D', u'codeshareType': u'O', u'flightNumber': u'1338', u'flightBk': u'MH13381521676...</msg>
+<status status="PASS" endtime="20180607 14:29:45.372" starttime="20180607 14:29:45.368"></status>
+</kw>
+<kw name="Get File From Path" library="get_file_lib">
+<doc>get file from path and return string</doc>
+<arguments>
+<arg>${expected_file_full_json}</arg>
+</arguments>
+<assign>
+<var>${expected_full_json}</var>
+</assign>
+<msg timestamp="20180607 14:29:45.378" level="INFO">${expected_full_json} = {
+  "statusCode": "200",
+  "data": {
+    "statusCode": "200",
+    "flightBk": "MH13381521676800000NULL",
+    "airlineCode": "MH",
+    "flightNumber": "1338",
+    "operationalSuffix": "NULL",
+    "depa...</msg>
+<status status="PASS" endtime="20180607 14:29:45.378" starttime="20180607 14:29:45.375"></status>
+</kw>
+<kw name="To Json" library="RequestsLibrary">
+<doc>Convert a string to a JSON object</doc>
+<arguments>
+<arg>${expected_full_json}</arg>
+</arguments>
+<assign>
+<var>${expected_full_json1}</var>
+</assign>
+<msg timestamp="20180607 14:29:45.382" level="INFO">To JSON using : content={
+  "statusCode": "200",
+  "data": {
+    "statusCode": "200",
+    "flightBk": "MH13381521676800000NULL",
+    "airlineCode": "MH",
+    "flightNumber": "1338",
+    "operationalSuffix": "NULL",
+    "departureDate": "2018-03-22 00:00:00 GMT",
+    "flightCharacteristics": "D",
+    "codeshareType": "O",
+    "electronicTicketIndicator": "E",
+    "legs": [
+      {
+        "legBk": "MH13381521676800000NULLKULTGG",
+        "boardpoint": "KUL",
+        "offPoint": "TGG",
+        "departureTerminal": "M",
+        "routingOrder": 1,
+        "schedules": {
+          "departureDateTime": "Thu Mar 22 19:30:00 GMT 2018",
+          "departureDateTimeUTC": "Thu Mar 22 11:30:00 GMT 2018",
+          "arrivalDateTime": "Thu Mar 22 19:30:00 GMT 2018",
+          "arrivalDateTimeUTC": "Thu Mar 22 11:30:00 GMT 2018"
+        },
+        "aircrafts": {
+          "aircraftType": "738",
+          "acv": "738",
+          "acvTotalCapacity": "160"
+        },
+        "saleableCabins": [
+          {
+            "code": "J",
+            "capacity": 16
+          },
+          {
+            "code": "Y",
+            "capacity": 144
+          }
+        ]
+      }
+    ],
+    "codeshareInfos": [
+      {
+        "flightBk": "GA93851521676800000NULL",
+        "airlineCode": "GA",
+        "flightNumber": "9385",
+        "operationalSuffix": "NULL",
+        "codeShareType": "M",
+        "mktSegBks": [
+          "GA93851521676800000NULLKULTGGM"
+        ]
+      },
+      {
+        "flightBk": "MH13381521676800000NULL",
+        "airlineCode": "MH",
+        "flightNumber": "1338",
+        "operationalSuffix": "NULL",
+        "codeShareType": "M",
+        "flightCharacteristics": "D",
+        "mktSegBks": [
+          "MH13381521676800000NULLKULTGGM"
+        ]
+      },
+      {
+        "flightBk": "FY42941521676800000NULL",
+        "airlineCode": "FY",
+        "flightNumber": "4294",
+        "operationalSuffix": "NULL",
+        "codeShareType": "M",
+        "mktSegBks": [
+          "FY42941521676800000NULLKULTGGM"
+        ]
+      },
+      {
+        "flightBk": "PR35141521676800000NULL",
+        "airlineCode": "PR",
+        "flightNumber": "3514",
+        "operationalSuffix": "NULL",
+        "codeShareType": "M",
+        "mktSegBks": [
+          "PR35141521676800000NULLKULTGGM"
+        ]
+      },
+      {
+        "flightBk": "EK33561521676800000NULL",
+        "airlineCode": "EK",
+        "flightNumber": "3356",
+        "operationalSuffix": "NULL",
+        "codeShareType": "M",
+        "mktSegBks": [
+          "EK33561521676800000NULLKULTGGM"
+        ]
+      }
+    ]
+  },
+  "meta": {
+    "creationDate": 1510540446959,
+    "lastUpdateDate": 1510540446960
+  }
+} </msg>
+<msg timestamp="20180607 14:29:45.383" level="INFO">To JSON using : pretty_print=False </msg>
+<msg timestamp="20180607 14:29:45.383" level="INFO">${expected_full_json1} = {u'meta': {u'lastUpdateDate': 1510540446960L, u'creationDate': 1510540446959L}, u'data': {u'flightCharacteristics': u'D', u'codeshareType': u'O', u'flightNumber': u'1338', u'flightBk': u'MH13381521676...</msg>
+<status status="PASS" endtime="20180607 14:29:45.383" starttime="20180607 14:29:45.380"></status>
+</kw>
+<kw name="Get File From Path" library="get_file_lib">
+<doc>get file from path and return string</doc>
+<arguments>
+<arg>${expected_file_statuscode}</arg>
+</arguments>
+<assign>
+<var>${expected_statusCode}</var>
+</assign>
+<msg timestamp="20180607 14:29:45.389" level="INFO">${expected_statusCode} = {
+  "statusCode": "200"
+}</msg>
+<status status="PASS" endtime="20180607 14:29:45.389" starttime="20180607 14:29:45.386"></status>
+</kw>
+<kw name="To Json" library="RequestsLibrary">
+<doc>Convert a string to a JSON object</doc>
+<arguments>
+<arg>${expected_statusCode}</arg>
+</arguments>
+<assign>
+<var>${expected_statusCode1}</var>
+</assign>
+<msg timestamp="20180607 14:29:45.393" level="INFO">To JSON using : content={
+  "statusCode": "200"
+} </msg>
+<msg timestamp="20180607 14:29:45.393" level="INFO">To JSON using : pretty_print=False </msg>
+<msg timestamp="20180607 14:29:45.394" level="INFO">${expected_statusCode1} = {u'statusCode': u'200'}</msg>
+<status status="PASS" endtime="20180607 14:29:45.395" starttime="20180607 14:29:45.391"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${actual1["statusCode"]}</arg>
+<arg>200</arg>
+</arguments>
+<status status="PASS" endtime="20180607 14:29:45.399" starttime="20180607 14:29:45.396"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${actual1["data"]["legs"][0]["boardpoint"]}</arg>
+<arg>KUL</arg>
+</arguments>
+<status status="PASS" endtime="20180607 14:29:45.407" starttime="20180607 14:29:45.404"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${actual1}</arg>
+<arg>${expected_full_json1}</arg>
+</arguments>
+<status status="PASS" endtime="20180607 14:29:45.411" starttime="20180607 14:29:45.409"></status>
+</kw>
+<kw name="Is Subset" library="subset_selection">
+<doc>Throws error if any elements or sub-elements of object1 are not present in object2.</doc>
+<arguments>
+<arg>${actual1}</arg>
+<arg>${expected_full_json1}</arg>
+</arguments>
+<msg timestamp="20180607 14:29:45.416" level="INFO">About to check list [{u'mktSegBks': [u'GA93851521676800000NULLKULTGGM'], u'codeShareType': u'M', u'flightNumber': u'9385', u'airlineCode': u'GA', u'flightBk': u'GA93851521676800000NULL', u'operationalSuffix': u'NULL'}, {u'mktSegBks': [u'MH13381521676800000NULLKULTGGM'], u'flightCharacteristics': u'D', u'codeShareType': u'M', u'flightNumber': u'1338', u'airlineCode': u'MH', u'flightBk': u'MH13381521676800000NULL', u'operationalSuffix': u'NULL'}, {u'mktSegBks': [u'FY42941521676800000NULLKULTGGM'], u'codeShareType': u'M', u'flightNumber': u'4294', u'airlineCode': u'FY', u'flightBk': u'FY42941521676800000NULL', u'operationalSuffix': u'NULL'}, {u'mktSegBks': [u'PR35141521676800000NULLKULTGGM'], u'codeShareType': u'M', u'flightNumber': u'3514', u'airlineCode': u'PR', u'flightBk': u'PR35141521676800000NULL', u'operationalSuffix': u'NULL'}, {u'mktSegBks': [u'EK33561521676800000NULLKULTGGM'], u'codeShareType': u'M', u'flightNumber': u'3356', u'airlineCode': u'EK', u'flightBk': u'EK33561521676800000NULL', u'operationalSuffix': u'NULL'}]</msg>
+<msg timestamp="20180607 14:29:45.417" level="INFO">About to check list [u'GA93851521676800000NULLKULTGGM']</msg>
+<msg timestamp="20180607 14:29:45.417" level="INFO">About to check list [u'MH13381521676800000NULLKULTGGM']</msg>
+<msg timestamp="20180607 14:29:45.418" level="INFO">About to check list [u'FY42941521676800000NULLKULTGGM']</msg>
+<msg timestamp="20180607 14:29:45.418" level="INFO">About to check list [u'PR35141521676800000NULLKULTGGM']</msg>
+<msg timestamp="20180607 14:29:45.418" level="INFO">About to check list [u'EK33561521676800000NULLKULTGGM']</msg>
+<msg timestamp="20180607 14:29:45.419" level="INFO">About to check list [{u'offPoint': u'TGG', u'legBk': u'MH13381521676800000NULLKULTGG', u'routingOrder': 1, u'aircrafts': {u'acvTotalCapacity': u'160', u'acv': u'738', u'aircraftType': u'738'}, u'departureTerminal': u'M', u'schedules': {u'arrivalDateTimeUTC': u'Thu Mar 22 11:30:00 GMT 2018', u'departureDateTime': u'Thu Mar 22 19:30:00 GMT 2018', u'arrivalDateTime': u'Thu Mar 22 19:30:00 GMT 2018', u'departureDateTimeUTC': u'Thu Mar 22 11:30:00 GMT 2018'}, u'boardpoint': u'KUL', u'saleableCabins': [{u'code': u'J', u'capacity': 16}, {u'code': u'Y', u'capacity': 144}]}]</msg>
+<msg timestamp="20180607 14:29:45.419" level="INFO">About to check list [{u'code': u'J', u'capacity': 16}, {u'code': u'Y', u'capacity': 144}]</msg>
+<status status="PASS" endtime="20180607 14:29:45.419" starttime="20180607 14:29:45.413"></status>
+</kw>
+<kw name="Is Subset" library="subset_selection">
+<doc>Throws error if any elements or sub-elements of object1 are not present in object2.</doc>
+<arguments>
+<arg>${expected1}</arg>
+<arg>${actual1}</arg>
+</arguments>
+<msg timestamp="20180607 14:29:45.425" level="INFO">About to check list [{u'mktSegBks': [u'MH13381521676800000NULLKULTGGM'], u'flightCharacteristics': u'D', u'codeShareType': u'M', u'flightNumber': u'1338', u'airlineCode': u'MH', u'flightBk': u'MH13381521676800000NULL', u'operationalSuffix': u'NULL'}, {u'mktSegBks': [u'FY42941521676800000NULLKULTGGM'], u'codeShareType': u'M', u'flightNumber': u'4294', u'airlineCode': u'FY', u'flightBk': u'FY42941521676800000NULL', u'operationalSuffix': u'NULL'}, {u'mktSegBks': [u'PR35141521676800000NULLKULTGGM'], u'codeShareType': u'M', u'flightNumber': u'3514', u'airlineCode': u'PR', u'flightBk': u'PR35141521676800000NULL', u'operationalSuffix': u'NULL'}, {u'mktSegBks': [u'EK33561521676800000NULLKULTGGM'], u'codeShareType': u'M', u'flightNumber': u'3356', u'airlineCode': u'EK', u'flightBk': u'EK33561521676800000NULL', u'operationalSuffix': u'NULL'}]</msg>
+<msg timestamp="20180607 14:29:45.425" level="INFO">The keys set([u'flightCharacteristics']) are missing in other dictionary: 
+{u'mktSegBks': [u'GA93851521676800000NULLKULTGGM'], u'codeShareType': u'M', u'flightNumber': u'9385', u'airlineCode': u'GA', u'flightBk': u'GA93851521676800000NULL', u'operationalSuffix': u'NULL'}</msg>
+<msg timestamp="20180607 14:29:45.425" level="INFO">About to check list [u'MH13381521676800000NULLKULTGGM']</msg>
+<msg timestamp="20180607 14:29:45.426" level="INFO">About to check list [u'FY42941521676800000NULLKULTGGM']</msg>
+<msg timestamp="20180607 14:29:45.426" level="INFO">FY42941521676800000NULLKULTGGM is not in the list. we should stop here</msg>
+<msg timestamp="20180607 14:29:45.426" level="INFO">About to check list [u'FY42941521676800000NULLKULTGGM']</msg>
+<msg timestamp="20180607 14:29:45.426" level="INFO">About to check list [u'PR35141521676800000NULLKULTGGM']</msg>
+<msg timestamp="20180607 14:29:45.426" level="INFO">PR35141521676800000NULLKULTGGM is not in the list. we should stop here</msg>
+<msg timestamp="20180607 14:29:45.427" level="INFO">About to check list [u'PR35141521676800000NULLKULTGGM']</msg>
+<msg timestamp="20180607 14:29:45.427" level="INFO">About to check list [u'EK33561521676800000NULLKULTGGM']</msg>
+<msg timestamp="20180607 14:29:45.427" level="INFO">EK33561521676800000NULLKULTGGM is not in the list. we should stop here</msg>
+<msg timestamp="20180607 14:29:45.428" level="INFO">About to check list [u'EK33561521676800000NULLKULTGGM']</msg>
+<status status="PASS" endtime="20180607 14:29:45.428" starttime="20180607 14:29:45.421"></status>
+</kw>
+<kw name="Is Subset" library="subset_selection">
+<doc>Throws error if any elements or sub-elements of object1 are not present in object2.</doc>
+<arguments>
+<arg>${expected_statusCode1}</arg>
+<arg>${actual1}</arg>
+</arguments>
+<status status="PASS" endtime="20180607 14:29:45.434" starttime="20180607 14:29:45.430"></status>
+</kw>
+<doc>= Test Condition =
+Provide some test condition
+= Test data =
+Test data
+= Test step number =
+== Step 1 ==
+Test steps
+== Step 2 ==
+....
+== Expected Result ==
+Verify</doc>
+<timeout value="3 minutes 20 seconds"></timeout>
+<status status="PASS" endtime="20180607 14:29:45.437" critical="yes" starttime="20180607 14:29:43.472"></status>
+</test>
+<status status="PASS" endtime="20180607 14:29:45.448" starttime="20180607 14:29:43.373"></status>
+</suite>
+<status status="PASS" endtime="20180607 14:29:45.464" starttime="20180607 14:29:38.367"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="3">Critical Tests</stat>
+<stat fail="0" pass="3">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="Sample Wbs Test" pass="3">Sample Wbs Test</stat>
+<stat fail="0" id="s1-s1" name="Demo Random Generators" pass="1">Sample Wbs Test.Demo Random Generators</stat>
+<stat fail="0" id="s1-s2" name="Demo Sorted Json" pass="1">Sample Wbs Test.Demo Sorted Json</stat>
+<stat fail="0" id="s1-s3" name="Demo Subset" pass="1">Sample Wbs Test.Demo Subset</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
